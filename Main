@@ -1,0 +1,16 @@
+package at.graffity.api;
+
+import java.io.*;
+import java.time.LocalDate;
+import java.time.temporal.TemporalUnit;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        GrafConfiguration configuration = new GrafConfiguration("graf.graf");
+        configuration.setString("string", "String");
+        configuration.close();
+        System.out.println(configuration.getString("string"));
+    }
+}
